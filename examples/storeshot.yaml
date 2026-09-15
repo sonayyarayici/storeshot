@@ -1,0 +1,30 @@
+# storeshot configuration
+# Docs: https://github.com/sonayyarayici/storeshot
+
+input: raw          # folder holding your raw device screenshots
+output: out         # where store-ready images are written
+format: png         # png or jpg
+
+targets:
+  - ios-6.9         # required by the App Store for iPhone
+  - ipad-13         # required by the App Store for iPad
+  - play-phone      # Google Play phone
+  - play-feature  # Google Play feature graphic (1024x500 banner)
+
+style:
+  background: ["#0B1020", "#1E2A5A"]   # one color = solid, two or more = gradient
+  caption_color: "#FFFFFF"
+  padding: 0.08         # side padding, fraction of width
+  caption_area: 0.20    # top band reserved for the caption
+  corner_radius: 0.035  # device corner rounding, fraction of width
+  shadow: true
+  # font: /path/to/YourFont.ttf
+
+screens:
+  - file: 01-home.png
+    caption: "Everything in one place"
+  - file: 02-search.png
+    caption: "Find it instantly"
+
+# Text shown on the Play Store feature graphic, if you enable that target.
+feature_caption: "Your tagline here"
